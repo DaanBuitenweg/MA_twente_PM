@@ -27,8 +27,6 @@
     echo "<br>";
     ?>
     
-    <a href=verwijder.php>maak een nieuwe
-    </a>
 </body>
 
 </html>
