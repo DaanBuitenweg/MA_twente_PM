@@ -28,7 +28,7 @@ if (isset($_POST["submit"])) {
     $categorie =        htmlspecialchars($_POST["categorie"]);
     unset($_POST["submit"]);
 
-    $foutmelding        = controleerRegistratieInput($user,$pass,$repeatpass);
+    $foutmelding        = controleerRegistratieInput($vraag,$antwoord,$categorie);
 
     if (!empty($foutmelding)) {
         echo $foutmelding;
