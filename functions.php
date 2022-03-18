@@ -1,5 +1,5 @@
-<!-- <?php
-function controleerRegistratieInput($vraag, $antwoord)
+<?php
+function controleerRegistratieInput($vraag, $antwoord, $categorie)
 {
     $foutmelding = '';
 
@@ -9,6 +9,8 @@ function controleerRegistratieInput($vraag, $antwoord)
     if(empty($antwoord)){
     $foutmelding .= "<br> voer een antwoord in ";
     }
-
+    if(empty($categorie)){
+        $foutmelding .= "<br> voer een categorie in ";
+    }
     return $foutmelding;
-} -->
+}
