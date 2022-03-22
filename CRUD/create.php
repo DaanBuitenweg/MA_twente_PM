@@ -9,9 +9,9 @@
         <form method="post">
             <input id="text" type="text" name="vraag" placeholder="vraag"> 
             <br>
-            <input id="text" type="password" name="antwoord" placeholder="antwoord" >
+            <input id="text" type="text" name="antwoord" placeholder="antwoord" >
             <br>
-            <input id="text" type="password" name="categorie" placeholder="categorie" >
+            <input id="text" type="text" name="categorie" placeholder="categorie" >
             <br>
             <input id="button" type="submit" name="submit" value="maak aan"><br>
         </form>
