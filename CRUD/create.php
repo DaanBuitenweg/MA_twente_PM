@@ -9,9 +9,9 @@
         <form method="post">
             <input id="text" type="text" name="vraag" placeholder="vraag"> 
             <br>
-            <input id="password" type="password" name="antwoord" placeholder="antwoord" >
+            <input id="text" type="password" name="antwoord" placeholder="antwoord" >
             <br>
-            <input id="password" type="password" name="categorie" placeholder="categorie" >
+            <input id="text" type="password" name="categorie" placeholder="categorie" >
             <br>
             <input id="button" type="submit" name="submit" value="maak aan"><br>
         </form>
@@ -29,7 +29,7 @@ if (isset($_POST["submit"])) {
     $categorie =        htmlspecialchars($_POST["categorie"]);
     unset($_POST["submit"]);
 
-    $foutmelding        = controleerRegistratieInput($user,$pass,$repeatpass);
+    $foutmelding        = controleerRegistratieInput($vraag,$antwoord,$categorie);
 
     if (!empty($foutmelding)) {
         echo $foutmelding;
