@@ -9,12 +9,11 @@ function geefinfoHtml($info)
         $antwoord       = $rij["antwoord"];
         $categorie       = $rij["categorie"];
 
-        $html .= "<br>$vraag        $antwoord       $categorie";
+        $html .= "<tr><td>$vraag</td><td>$antwoord</td><td>$categorie</td></tr>";
     }
 
     return $html;
 }
-
 
 function toonAlleinfo()
 {
