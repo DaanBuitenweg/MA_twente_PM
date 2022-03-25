@@ -1,4 +1,5 @@
 <?php
+include 'connection.php';
 function geefinfoHtml($info)
 {
 
@@ -88,12 +89,12 @@ function loginGebruiker($gebruikersnaam, $wachtwoord){
 $query = 'SELECT wachtwoord
 FROM gebruiker
 WHERE (gebruikersnaam = :gebruikersnaam)';
-$values = [':gebruikersnaam' => $gebruikersnaam];
+$values = [':gebruikersnaam' => $gebruikersnaam];}
 try {
 $pdo = maakPDO();
 $res = $pdo->prepare($query);
 $res->execute($values);
 } catch (PDOException $e) {
 echo 'Er heeft zich een fout voorgedaan: ' . $e->getMessage();
-die();
+die();}
 ?>

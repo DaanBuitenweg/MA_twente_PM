@@ -3,7 +3,7 @@
 define('DB_SERVER', 'localhost');
 define('DB_USERNAME', 'root');
 define('DB_PASSWORD', '');
-define('DB_NAME', 'ma_twente');
+define('DB_NAME', 'pm_ma_twente');
 
 
 
@@ -18,4 +18,4 @@ function maakPDO()
     } catch (PDOException $e) {
         die("Verbinding maken mislukt, error:. " . $e->getMessage());
     }
-}
+}   
