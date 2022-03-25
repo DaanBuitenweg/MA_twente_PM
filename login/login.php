@@ -9,7 +9,7 @@
 
 <?php
 include 'functie.php';
-include 'connection.php';
+include 'connect.php';
 
 if (isset($_POST['submit'])) {
 
@@ -35,4 +35,3 @@ else
 echo "Gebruikersnaam en/of wachtwoord is incorrect";
 }
 }
-?>
