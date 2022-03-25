@@ -1,8 +1,8 @@
 <?php
 define('DB_SERVER', 'localhost');
-define('DB_USERNAME', 'Daan');
-define('DB_PASSWORD', 'sbbFoX86UNS*47UD');
-define('DB_NAME', 'login_db');
+define('DB_USERNAME', 'root');
+define('DB_PASSWORD', '');
+define('DB_NAME', 'pm_ma_twente');
 
 function maakPDO(){
 try {

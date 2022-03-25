@@ -1,9 +1,9 @@
 <!-- <?php include 'header.php'?> -->
 <?php
+include "functie.php";
 include_once "connection.php";
-include "functie.php"
 
-toonAlleinfo()
+toonAlleinfo();
 
 ?>
 <!-- <?php include 'footer.php'?> -->
