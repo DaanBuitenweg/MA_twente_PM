@@ -19,7 +19,7 @@ function geefinfoHtml($info)
 function toonAlleinfo()
 {
     $sql        = "SELECT vraag, antwoord, categorie
-                    FROM faq
+                    FROM faqbeheer
                     ORDER BY vraag";
                     
     $pdo = maakPDO();

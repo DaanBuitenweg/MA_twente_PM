@@ -1,8 +1,9 @@
-<?php include 'header.php'?>
+<!-- <?php include 'header.php'?> -->
 <?php
-require_once "config.php";
+include_once "connection.php";
+include "functie.php"
 
 toonAlleinfo()
 
 ?>
-<?php include 'footer.php'?>
+<!-- <?php include 'footer.php'?> -->
