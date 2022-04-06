@@ -20,8 +20,8 @@ return $foutmelding;
 
 function gebruikersnaamBeschikbaar($gebruikersnaam){
 $query = 'SELECT *
-FROM gebruiker
-WHERE (gebruikersnaam = :gebruikersnaam)';
+FROM users
+WHERE (Username = :Username)';
 $values = [':gebruikersnaam' => $gebruikersnaam];
 try {
 $pdo = maakPDO();
@@ -41,8 +41,8 @@ return true;
 
 function voegGebruikerToe($gebruikersnaam, $wachtwoord){
 $versleuteldWachtwoord = password_hash($wachtwoord, PASSWORD_DEFAULT);
-$query = 'INSERT INTO gebruiker (gebruikersnaam, wachtwoord)
-VALUES (:gebruikersnaam, :wachtwoord)';
+$query = 'INSERT INTO user (Username, wachtwoord)
+VALUES (:Username, :wachtwoord)';
 $values = [':gebruikersnaam' => $gebruikersnaam, ':wachtwoord' => $versleuteldWachtwoord];
 $pdo = maakPDO();
 try {
@@ -57,8 +57,8 @@ die();
 
 function loginGebruiker($gebruikersnaam, $wachtwoord){
 $query = 'SELECT wachtwoord
-FROM gebruiker
-WHERE (gebruikersnaam = :gebruikersnaam)';
+FROM User
+WHERE (Username = :Username)';
 $values = [':gebruikersnaam' => $gebruikersnaam];
 try {
 $pdo = maakPDO();
