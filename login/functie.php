@@ -22,7 +22,7 @@ function gebruikersnaamBeschikbaar($gebruikersnaam){
 $query = 'SELECT *
 FROM users
 WHERE (Username = :Username)';
-$values = [':gebruikersnaam' => $gebruikersnaam];
+$values = [':Username' => $gebruikersnaam];
 try {
 $pdo = maakPDO();
 $res = $pdo->prepare($query);
@@ -41,9 +41,9 @@ return true;
 
 function voegGebruikerToe($gebruikersnaam, $wachtwoord){
 $versleuteldWachtwoord = password_hash($wachtwoord, PASSWORD_DEFAULT);
-$query = 'INSERT INTO user (Username, wachtwoord)
-VALUES (:Username, :wachtwoord)';
-$values = [':gebruikersnaam' => $gebruikersnaam, ':wachtwoord' => $versleuteldWachtwoord];
+$query = 'INSERT INTO users (Username, Password)
+VALUES (:Username, :Password)';
+$values = [':Username' => $gebruikersnaam, ':Password' => $versleuteldWachtwoord];
 $pdo = maakPDO();
 try {
 $res = $pdo->prepare($query);
@@ -56,10 +56,10 @@ die();
 }
 
 function loginGebruiker($gebruikersnaam, $wachtwoord){
-$query = 'SELECT wachtwoord
-FROM User
+$query = 'SELECT Password
+FROM Users
 WHERE (Username = :Username)';
-$values = [':gebruikersnaam' => $gebruikersnaam];
+$values = [':Username' => $gebruikersnaam];
 try {
 $pdo = maakPDO();
 $res = $pdo->prepare($query);
@@ -70,7 +70,7 @@ die();
 }
 $row = $res->fetch(PDO::FETCH_ASSOC);
 if ($row){
-if (password_verify($wachtwoord, $row['wachtwoord'])) {
+if (password_verify($wachtwoord, $row['Password'])) {
 return true;
 } else {
 return false;
