@@ -21,20 +21,6 @@ td {
 
 tr:nth-child(even) {background-color: #bdc3c7;}
 
-/* a {
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
-} */
 </style>
 </head>
 <?php include 'header.php'?>
