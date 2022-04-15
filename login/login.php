@@ -1,6 +1,6 @@
 <form method="post">
 <label for="gebruikersnaam">Gebruikersnaam</label>
-<input type="text" id="gebruikersnaam" name="gebruikersnaam">
+<input type="text" id="gebruikersnaam" name="gebruikersnaam"><br>
 <label for="wachtwoord">Wachtwoord</label>
 <input type="password" id="wachtwoord" name="wachtwoord">
 <br />
